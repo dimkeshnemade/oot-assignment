@@ -1,0 +1,272 @@
+Name: Dimkesh Nemade
+PRN: 20250802332
+Subject: Object Oriented Techniques (Java) - Slow Learner Assignment
+
+====================================================================
+PART A: 10 EASY JAVA OOP PROGRAMS (WITH SIMPLE EXPLANATIONS)
+====================================================================
+
+--------------------------------------------------------------------
+Program 1: Class, Object, and Method
+--------------------------------------------------------------------
+class Student {
+    String name;
+    int rollNo;
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Roll No: " + rollNo);
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.name = "Dimkesh";
+        s1.rollNo = 101;
+        s1.display();
+    }
+}
+
+--------------------------------------------------------------------
+Program 2: Default Constructor
+--------------------------------------------------------------------
+class Car {
+    String brand;
+
+    // Default Constructor
+    Car() {
+        brand = "Tata";
+        System.out.println("Default Constructor Called!");
+    }
+
+    void showBrand() {
+        System.out.println("Car Brand: " + brand);
+    }
+
+    public static void main(String[] args) {
+        Car c1 = new Car();
+        c1.showBrand();
+    }
+}
+
+--------------------------------------------------------------------
+Program 3: Parameterized Constructor
+--------------------------------------------------------------------
+class Book {
+    String title;
+    int price;
+
+    // Parameterized Constructor
+    Book(String t, int p) {
+        title = t;
+        price = p;
+    }
+
+    void displayBook() {
+        System.out.println("Book Title: " + title + ", Price: " + price);
+    }
+
+    public static void main(String[] args) {
+        Book b1 = new Book("Java Basics", 350);
+        b1.displayBook();
+    }
+}
+
+--------------------------------------------------------------------
+Program 4: Method Overloading (Compile-time Polymorphism)
+--------------------------------------------------------------------
+class Calculator {
+    // Method 1: Adds two integers
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method 2: Adds three integers
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println("Sum of 2 numbers: " + calc.add(10, 20));
+        System.out.println("Sum of 3 numbers: " + calc.add(10, 20, 30));
+    }
+}
+
+--------------------------------------------------------------------
+Program 5: Single Inheritance
+--------------------------------------------------------------------
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();  // Inherited from Animal
+        d.bark(); // Dog's own method
+    }
+}
+
+--------------------------------------------------------------------
+Program 6: Multilevel Inheritance
+--------------------------------------------------------------------
+class Grandparent {
+    void house() {
+        System.out.println("Grandparent's house");
+    }
+}
+
+class Parent extends Grandparent {
+    void car() {
+        System.out.println("Parent's car");
+    }
+}
+
+class Child extends Parent {
+    void bike() {
+        System.out.println("Child's bike");
+    }
+
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.house();
+        c.car();
+        c.bike();
+    }
+}
+
+--------------------------------------------------------------------
+Program 7: Method Overriding (Runtime Polymorphism)
+--------------------------------------------------------------------
+class Vehicle {
+    void run() {
+        System.out.println("Vehicle is running");
+    }
+}
+
+class Bike extends Vehicle {
+    // Overriding the run() method
+    void run() {
+        System.out.println("Bike is running safely");
+    }
+
+    public static void main(String[] args) {
+        Bike b = new Bike();
+        b.run();
+    }
+}
+
+--------------------------------------------------------------------
+Program 8: Encapsulation (Using Private Variables & Getters/Setters)
+--------------------------------------------------------------------
+class BankAccount {
+    private double balance;
+
+    public void setBalance(double b) {
+        balance = b;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public static void main(String[] args) {
+        BankAccount acc = new BankAccount();
+        acc.setBalance(5000.0);
+        System.out.println("Account Balance: " + acc.getBalance());
+    }
+}
+
+--------------------------------------------------------------------
+Program 9: Abstraction (Using Abstract Class)
+--------------------------------------------------------------------
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing a Circle");
+    }
+
+    public static void main(String[] args) {
+        Shape s = new Circle();
+        s.draw();
+    }
+}
+
+--------------------------------------------------------------------
+Program 10: Interface Implementation
+--------------------------------------------------------------------
+interface Printable {
+    void print();
+}
+
+class Document implements Printable {
+    public void print() {
+        System.out.println("Printing the document...");
+    }
+
+    public static void main(String[] args) {
+        Document doc = new Document();
+        doc.print();
+    }
+}
+
+
+====================================================================
+PART B: 10 EASY OOP THEORY QUESTIONS AND ANSWERS
+====================================================================
+
+Question 1: What is Object-Oriented Programming (OOP)?
+Answer:
+Object-Oriented Programming (OOP) is a programming style based on the concept of "objects" that contain both data (variables) and code (methods). It helps organize programs cleanly and makes code reusable.
+
+Question 2: What is a Class in Java?
+Answer:
+A class is a blueprint or template used to create objects. It defines the variables (properties) and methods (actions) that the objects created from it will have.
+
+Question 3: What is an Object in Java?
+Answer:
+An object is a real-world entity or instance of a class. For example, if "Car" is a class, then a red Tata car is an object of that class. We create an object in Java using the `new` keyword.
+
+Question 4: What is a Constructor? What are its types?
+Answer:
+A constructor is a special method that has the exact same name as the class and is automatically called when an object is created. It is used to initialize object values.
+The two main types are:
+1. Default Constructor (takes no parameters)
+2. Parameterized Constructor (takes parameters to assign specific values)
+
+Question 5: What is Inheritance and what is its main advantage?
+Answer:
+Inheritance is a mechanism where one class (child/subclass) acquires the properties and methods of another class (parent/superclass) using the `extends` keyword. Its main advantage is code reusability.
+
+Question 6: What is Polymorphism? Name its two types in Java.
+Answer:
+Polymorphism means "many forms." It allows one method name to perform different tasks.
+The two types in Java are:
+1. Compile-time Polymorphism (achieved using Method Overloading)
+2. Runtime Polymorphism (achieved using Method Overriding)
+
+Question 7: What is the difference between Method Overloading and Method Overriding?
+Answer:
+- Method Overloading happens within the same class when multiple methods have the same name but different parameters.
+- Method Overriding happens between a parent class and a child class when the child class provides its own implementation of a method already defined in the parent class.
+
+Question 8: What is Encapsulation in Java?
+Answer:
+Encapsulation is the process of wrapping data (variables) and code (methods) together into a single unit (class). We achieve encapsulation by making variables `private` and providing `public` getter and setter methods to access them safely.
+
+Question 9: What is Abstraction?
+Answer:
+Abstraction means hiding internal implementation details and showing only the essential features to the user. In Java, abstraction is achieved using abstract classes and interfaces.
+
+Question 10: What is an Interface in Java?
+Answer:
+An interface is a completely abstract blueprint of a class that contains abstract methods (methods without a body). A class uses the `implements` keyword to implement an interface.
