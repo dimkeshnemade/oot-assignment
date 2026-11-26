@@ -1,6 +1,10 @@
 Name: Dimkesh Nemade
 PRN: 20250802332
 Subject: Object Oriented Techniques (Java) - Slow Learner Assignment
+Collaborators:  Yash Gavandhare 20250802308
+                Atharva Mor 20250802340
+                Hinal Borle 20250802367
+                Ayush Pathare 20250802370
 
 ====================================================================
 PART A: 10 EASY JAVA OOP PROGRAMS (WITH SIMPLE EXPLANATIONS)
